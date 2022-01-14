@@ -1,0 +1,11 @@
+*AE01.15.00.001_sim02.net
+.inc ../AE01.15.00.001.cir
+.step param CLPF 10n 50n 10n
+.param RLPF=100
+.param FC=1/(2*pi*{RLPF}*{CLPF})
+.step param FCD 1K 10Meg 100k
+.param FCT=FC+FCD
+.ac list {FCD}
+.options plotwinsize=0
+.options numdgt=7
+
